@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--ff-regular);
+}
+
+
+:root {
+   --clr-orange: hsl(25, 97%, 53%);
+
+   --clr-white: hsl(0, 0%, 100%);
+   --clr-light-gray: hsl(217, 12%, 63%);
+   --clr-medium-gray: hsl(216, 12%, 54%);
+   --clr-dark-blue: hsl(213, 20%, 18%);
+   --clr-darker-blue: hsl(216, 12%, 8%);
+
+   --clr-circle: hsl(214, 14%, 22%);
+
+
+   --ff-regular:  'Overpass', sans-serif;
+   --fs-regular: 0.9375rem;
+
+   --fw-bold: 400;
+   --fw-black: 700;
+}
+
+
+/* Utility Classes Start */
+.circle-utility {
+   width: 1rem;
+   height: 1rem;
+   padding: 1.5rem;
+   border-radius: 50%;
+   background: var(--clr-circle);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+/* Utility Classes End */
+
+
+body {
+   outline-color: transparent;
+   background: var(--clr-darker-blue);
+   color: var(--clr-white);
+
+   /* To Center Project in the Page */
+   display: grid;
+   place-content: center;
+   height: 100vh;
+}
+
+
+.rating-card {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+
+   background: var(--clr-dark-blue);
+   /* border: 1px solid red; */
+   border-radius: 1.5rem;
+   overflow: hidden;
+
+   padding: 2rem;
+   max-width: 25rem;
+}
+
+
+.description {
+   line-height: 1.4;
+   opacity: 0.4;
+}
+
+
+
+.rating-system {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 1rem;
+}
+
+
+.rating {
+   cursor: pointer;
+   transition: 200ms;
+}
+
+
+.rating:hover {
+   background: var(--clr-orange);
+}
+
+
+.active {
+   background: var(--clr-light-gray);
+}
+
+
+.submit {
+   background: var(--clr-orange);
+   color: var(--clr-white);
+   border: none;
+   border-radius: 2rem;
+   padding: 0.95rem;
+   text-transform: uppercase;
+   font-size: var(--fs-regular);
+   font-weight: var(--fw-black);
+   cursor: pointer;
+
+   transition: background 200ms;
+}
+
+
+.submit:hover {
+   background: var(--clr-white);
+   color: var(--clr-orange);
+}
+
+
+.thanking-card {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 1.5rem;
+   
+   max-width: 25rem;
+   padding: 2rem;
+   text-align: center;
+   background: var(--clr-dark-blue);
+
+   border-radius: 1.5rem;
+   overflow: hidden;
+}
+
+
+/* Special Utility Start */
+.hidden {
+   display: none;
+}
+/* Special Utility End */
+
+
+.illustration-container {
+   width: 20rem;
+}
+
+
+.rating-results {
+   color: var(--clr-orange);
+   background: var(--clr-circle);
+   padding: 0.75rem;
+   border-radius: 100vw;
+   border: none;
+}
+
